@@ -1,8 +1,8 @@
 # About
+<img src="https://www.plasmasimulationsbyexample.com/images/plasmasim-book-strip.jpg" alt="Plasma Simulations by Example Cover" width="200" align="right"/>
 This repository contains example codes for Brieda, L., *Plasma Simulations by Example*, CRC Press 2019.
 More information about the book can be found at the [companion website](https://www.plasmasimulationsbyexample.com/).
 
-![Plasma Simulations by Example Book Cover](https://www.plasmasimulationsbyexample.com/images/plasmasim-book-strip.jpg)
 
 # Plasma Simulations Courses
 The material from this book serves as the basis for various plasma simulation classes the author runs on an
