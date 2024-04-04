@@ -52,6 +52,9 @@ in C++. C++17 was not yet universally supported at the time of book writing. Hen
 It is quite likely there are various bugs in the code. Please use the Issues Tracker to identify them so they can be corrected
 in a future book revision. 
 
+# Contact
+Dr. Lubos Brieda: lubos.brieda@particleincell.com
+
 
 
 
