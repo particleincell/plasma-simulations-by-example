@@ -16,15 +16,15 @@ The electrostatic particle in cell (ES-PIC) method is introduced by developing a
 The 3D grounded box ES-PIC code from Chapter 2 is modified to simulate flow of plasma past a stationary sphere (which is analogous to an object moving through through ambient plasma environment). Here we introduce hybrid PIC with Boltzmann relationship for electrons, non-linear Poisson solver, sugarcubing, preconditioned conjugate gradient, steady-state data averaging, calculation of mesh-averaged flow velocity and temperature, and the quasi-neutral approximation.
 ## Chapter 4: Material Interactions
 The example in the prior chapter modeled only ions, which were removed on surface impact to approximate surface neutralization. This chapter modifies the code to explicitly simulate the neutral species. The chapter also reviews velocity sampling from the Maxwellian velocity distribution using uniform and variable macroparticle weight techniques with particle merging. Collisions are introduced next using the Monte Carlo Collisions (MCC) and Direct Simulation Monte Carlo (DSMC) methods. The chapter closes with a discussion of dielectric boundaries and the use of tessellated surface geometries.
-##Chapter 5: Symmetry
+## Chapter 5: Symmetry
 This chapter introduces approaches for reducing simulation run time by exploiting inherent symmetry or uniformities along a spatial direction. In the case of the flow around the sphere example, symmetry allows one to simulate just a quarter domain. Periodic boundary conditions are also reviewed. Next, a simulation of flow around an infinitely long cylinder is introduced, yielding a planar (XY) 2D simulation. The chapter closes by covering the axisymmetric formulation applicable for simulating cylindrical domains.
-##Chapter 6: Unstructured Meshes
+## Chapter 6: Unstructured Meshes
 This chapter introduces approaches for performing PIC simulations on unstructured meshes. It begins by describing steps needed to generate and load such meshes. Next, a particle tracking code is developed in order to demonstrate how to push particles and interpolate mesh data with unstructured mesh. The finite element method (FEM) is introduced next to produce a Poisson solver. An unstructured version of the flow around a sphere example is then developed.
-##Chapter 7: Electromagnetics
+## Chapter 7: Electromagnetics
 This chapter begins by introducing the Boris algorithm for advancing velocities of magnetized particles. Magnetostatic field solver is developed next. This leads to an electromagnetic PIC code utilizing staggered (Yee) grids. The computation of curl, as well as relativistic push are covered.
-##Chapter 8: Eulerian Methods
+## Chapter 8: Eulerian Methods
 This chapter introduces numerical methods that are based around solving partial differential equations (PDEs) on a stationary grid. The chapter introduces governing equations of magnetohydrodynamics (MHD), with solution methods demonstrated using the model advection-diffusion equation. Stability analysis is covered. The chapter also introduces Vlasov solvers for solving the Boltzmann equation governing the evolution of the velocity distribution function.
-##Chapter 9: Parallel Programming
+## Chapter 9: Parallel Programming
 The final chapter introduces parallelization techniques. The chapter covers profiling, multithreading, domain decomposition with MPI, and graphics card processing using CUDA. Common pitfalls, such as race condition, deadlock, and GPU memory transfer overhead are reviewed. A parallel version of the flow around the sphere is developed.
 
 # Building
