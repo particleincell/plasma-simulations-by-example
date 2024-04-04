@@ -44,7 +44,7 @@ together as in
 `$ g++ -O2 *.cpp -o sphere`  
 Simulation results are stored in a subfolder `results` which needs to be __created manually__ before the code is run for
 the first time. The reason for this is that prior to C++17, there was no platform independent way to create directories
-in C++. C++17 was not yet universally supported at the time of book writing. Hence to run the code the first time, use
+in C++. C++17 was not yet universally supported at the time of book writing. Hence to run the code the first time, use  
 `$ mkdir results`  
 `$ ./sphere`
 
