@@ -28,8 +28,8 @@ This chapter introduces numerical methods that are based around solving partial 
 The final chapter introduces parallelization techniques. The chapter covers profiling, multithreading, domain decomposition with MPI, and graphics card processing using CUDA. Common pitfalls, such as race condition, deadlock, and GPU memory transfer overhead are reviewed. A parallel version of the flow around the sphere is developed.
 
 # Building
-This examples are meant to be used along with the textbook. Some examples are standalone ``snippets'' used to demonstrate a
-particular functionality. These examples can be compiled and executed using  
+These examples are meant to be used along with the textbook. Some examples are standalone ``snippets'' used to demonstrate a
+particular functionality. Such examples can be compiled and executed using  
 `$ g++ file_name.cpp`  
 `$ ./a.out`  
 or, if you prefer specifying the output file name and including optimization  
@@ -39,11 +39,11 @@ or, if you prefer specifying the output file name and including optimization
 Python snippets can be run using  
 `$ python file_name.py`
 
-Other examples, such as the various versions of flow around the sphere, consist of multiple source files that need to be compiled
+Other examples, such as the various iterations of flow around the sphere, consist of multiple source files that need to be compiled
 together as in  
 `$ g++ -O2 *.cpp -o sphere`  
-Simulation results are stored in a subfolder `results` which needs to be __created manually__ before the code is run for
-the first time. The reason for this is that prior to C++17, there was no platform independent way to create directories
+Simulation results are usually stored in a subfolder `results` which needs to be __created manually__ before the code is run for
+the first time. The reason for this is that prior to C++17, there was no platform-independent way to create directories
 in C++. C++17 was not yet universally supported at the time of book writing. Hence to run the code the first time, use  
 `$ mkdir results`  
 `$ ./sphere`
