@@ -30,23 +30,34 @@ The final chapter introduces parallelization techniques. The chapter covers prof
 # Building
 These examples are meant to be used along with the textbook. Some examples are standalone ``snippets'' used to demonstrate a
 particular functionality. Such examples can be compiled and executed using  
-`$ g++ file_name.cpp`  
-`$ ./a.out`  
+```
+$ g++ file_name.cpp
+$ ./a.out
+```  
+
 or, if you prefer specifying the output file name and including optimization  
-`$ g++ -O2 file_name.cpp -o app_name`  
-`$ ./app_name`  
+```
+$ g++ -O2 file_name.cpp -o app_name
+$ ./app_name
+```
 
 Python snippets can be run using  
-`$ python file_name.py`
+```
+$ python file_name.py
+```
 
 Other examples, such as the various iterations of flow around the sphere, consist of multiple source files that need to be compiled
 together as in  
-`$ g++ -O2 *.cpp -o sphere`  
+```
+$ g++ -O2 *.cpp -o sphere
+```  
 Simulation results are usually stored in a subfolder `results` which needs to be __created manually__ before the code is run for
 the first time. The reason for this is that prior to C++17, there was no platform-independent way to create directories
 in C++. C++17 was not yet universally supported at the time of book writing. Hence to run the code the first time, use  
-`$ mkdir results`  
-`$ ./sphere`
+```
+$ mkdir results
+$ ./sphere
+```
 
 # Bugs
 It is quite likely there are various bugs in the code. Please use the Issues Tracker to identify them so they can be corrected
