@@ -23,9 +23,9 @@ void MagneticSolver::buildMatrix()
 	int nk = world.nk;
 	int nu = ni*nj*nk;
 
-	/*reserve space for node types*/
-	node_type.reserve(nu);
-	phi_m.reserve(nu);
+	/*resize space for node types*/
+	node_type.resize(nu);
+	phi_m.resize(nu);
 
 	//get sphere center
 	double3 orig_lc = world.XtoL(world.getSphereOrig());

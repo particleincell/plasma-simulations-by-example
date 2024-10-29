@@ -146,7 +146,7 @@ void EMSolver::buildMatrix()
 	int nu = ni*nj;
 
 	/*reserve space for node types*/
-	node_type.reserve(nu);
+	node_type.resize(nu);
 
 	/*build matrix*/
     for (int j=0;j<nj;j++)

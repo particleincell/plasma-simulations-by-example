@@ -157,8 +157,8 @@ void PotentialSolver::buildMatrix()
 	int nk = world.nk;
 	int nu = ni*nj*nk;
 
-	/*reserve space for node types*/
-	node_type.reserve(nu);
+	/*resize space for node types*/
+	node_type.resize(nu);
 
 	/*solve potential*/
 	for (int k=0;k<nk;k++)
