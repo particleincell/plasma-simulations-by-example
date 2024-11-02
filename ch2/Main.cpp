@@ -14,10 +14,10 @@ using namespace Const;		//to avoid having to write Const::ME
 int main(int argc, char *args[])
 {
 	/*initialize domain*/
-    World world(21,21,21);
+    World world(21,21,21);    
     world.setExtents({-0.1,-0.1,0},{0.1,0.1,0.2});
     world.setTime(2e-10,10000);
-
+   
 	/*set up particle species*/
 	vector<Species> species;
 	species.reserve(2);	//pre-allocate space for two species
@@ -27,9 +27,11 @@ int main(int argc, char *args[])
 	cout<<"Size of species "<<species.size()<<endl;
 
 	/*create particles*/
-	int3 np_ions_grid = {41,41,41};
-	int3 np_eles_grid = {21,21,21};
-	species[0].loadParticlesBoxQS(world.getX0(),world.getXm(),1e11,np_ions_grid);	//ions
+	//int3 np_ions_grid = {41,41,41};
+	//int3 np_eles_grid = {21,21,21};
+	
+	int3 np_ions_grid = {81,81,81};
+	int3 np_eles_grid = {41,41,41};	species[0].loadParticlesBoxQS(world.getX0(),world.getXm(),1e11,np_ions_grid);	//ions
 	species[1].loadParticlesBoxQS(world.getX0(),world.getXc(),1e11,np_eles_grid);	//electrons
 
 	/*initialize potential solver and solve initial potential*/

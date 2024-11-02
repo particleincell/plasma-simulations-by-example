@@ -290,7 +290,7 @@ void VolumeMesh::init()
 			{
 				for (int i=0;i<4;i++)
 				{
-					if (i!=v) nodes[tet.con[i]].type=OPEN;
+					if (i!=v && nodes[tet.con[i]].type==NORMAL) nodes[tet.con[i]].type=OPEN;
 				}
 			}
 	}

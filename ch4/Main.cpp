@@ -21,7 +21,7 @@ int main(int argc, char *args[])
     World world(41,21,41);
     world.setExtents({-0.2,-0.1,0},{0.2,0.1,0.4});
     world.setTime(1e-7,2000);
-
+    
 	/*set objects*/
 	double phi_sphere = -100;		//set default
 	if (argc>1)

@@ -294,7 +294,7 @@ void FESolver::solveNonLinear(dvector &rhoi)
 		double sum=0;
 		for (int u=0;u<neq;u++)	sum+=y[u]*y[u];
 
-		L2 = sqrt(sum)/neq;
+		L2 = sqrt(sum/neq);
 		if (L2<1e-2) 
 		{
 			cout<<" NR converged in "<<it+1<<" iterations with L2="<<setprecision(3)<<L2<<endl;
@@ -474,6 +474,7 @@ void FESolver::solveLinear(double **A, dvector &x, dvector &b)
 	int it;
 	const double tol=1e-4;
 	double L2;
+	double L2_last = -1;
 
 	for (int u=0;u<neq;u++)
 		if (fabs(A[u][u])<1e-12) 
@@ -508,9 +509,10 @@ void FESolver::solveLinear(double **A, dvector &x, dvector &b)
 				double r=b[u]-sum;
 				L+=r*r;
 			}
-			L2 = sqrt(L)/neq;
-			cout<<L2<<endl;
+			L2 = sqrt(L/neq);
 			if (L2<tol) {converged=true; break;}
+			if (it>500 && L2==L2_last) {cout<<"Stuck at "<<L2<<", quitting"<<endl; break;}
+			L2_last = L2;
 		}
 	}
 

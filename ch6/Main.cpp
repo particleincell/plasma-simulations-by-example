@@ -59,10 +59,10 @@ int main(int argc, char *args[])
 		world.computeChargeDensity(species);
 
         /*update potential*/
-      //  solver.solve();
+        solver.solve();
 
         /*obtain electric field*/
-     //   solver.computeEF();
+        solver.computeEF();
 
         /*update averages at steady state*/
         if (world.steadyState(species)) {

@@ -17,9 +17,10 @@ int main(int argc, char *args[])
 {
 	/*initialize domain*/
     World world(21,21,41);
+    
     world.setExtents({-0.1,-0.1,0},{0.1,0.1,0.4});
     world.setTime(1e-7,400);
-
+    
 	/*set objects*/
 	double phi_sphere = -100;		//set default
 	if (argc>1)
